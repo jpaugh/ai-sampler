@@ -77,6 +77,8 @@ the same response back more quickly.
 
 ## Sample output
 
+Look at the last line of output for the `Answer`.
+
 ```
 $ time nix-shell --run 'python ./main.py ~/Downloads/performance-quickpath-architecture-paper.pdf "Which processor architectures are supported?"'
 Query: Which processor architectures are supported?

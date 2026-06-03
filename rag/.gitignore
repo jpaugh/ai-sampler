@@ -1,0 +1,5 @@
+.venv/
+*.pdf
+embeddings.csv
+*.embed.csv
+*.prompt.md

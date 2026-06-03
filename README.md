@@ -1,6 +1,5 @@
 A collection of AI demos I've worked on
 
-
 # Arcane Sword Maker
 
 An incremental game that grew from the bemusing idea that the power of a
@@ -52,3 +51,62 @@ changes, and automatically fix any relevant issues before completing.
 
 This helped catch a lot of recurring issues in the AI code, and in turn
 protected my time as a reviewer of the AI's work product.
+
+# RAG
+
+AI researchers have a bad habit of using opaque jargon to describe
+simple programmatic tasks! (I'm sure their mothers are appropriately
+impressed.) The [RAG](/rag) project helped me understand
+retrieval-augmented generation and semantic search. This code was
+largely copied from a [tutorial][RAG tutorial], manually and
+painstakingly, and is not solely my own work.
+
+To use it, grab a PDF (perhaps [this white-paper from Intel][sample
+pdf]), preferably a dense and inscrutable one, and run this command to
+ask questions about it:
+
+```
+python ./main.py path/to/my.pdf "What does it all mean?"
+```
+
+You will also need to install the dependencies shown below. On first run, it will download a ~7 GB LLM model from https://huggingface.co/, and will then run an LLM locally on your computer to answer all your questions about the document. Subsequent runs will used a cached copy of the model.
+
+Note that the speed it runs at can vary widely depending on whether your
+GPU is supported or not. However, it does maintain a cache of LLM
+output (under the `ry.abu.gy` folder in your cache dir), so you may get
+the same response back more quickly.
+
+## Sample output
+
+```
+$ time nix-shell --run 'python ./main.py ~/Downloads/performance-quickpath-architecture-paper.pdf "Which processor architectures are supported?"'
+Query: Which processor architectures are supported?
+Sources ('/home/jpaugh/Downloads/performance-quickpath-architecture-paper.pdf',)
+Paths right now:
+Compiling RAG prompt...
+Compiling embeddings: 0it [00:00, ?it/s]
+Prompt cache key 04085cd11cbdc9d34c5021887f6180a469a88e9bb3353e65b8134ec5ea9b52a0
+Generating results for query {'role': 'user', 'content': 'Which processor architectures are supported?'}...
+Answer: The supported processor architectures include x86, ARM, and PowerPC. These architectures are widely used across various devices and systems, from personal computers and smartphones to servers and embedded systems. Each architecture has its own set of features and capabilities, catering to different performance, power consumption, and cost requirements.
+
+real    0m3.015s
+user    0m1.905s
+sys     0m0.497s
+```
+
+
+
+[sample pdf]: https://www.intel.in/content/dam/doc/white-paper/performance-quickpath-architecture-paper.pdf
+[RAG tutorial]: https://towardsai.net/p/l/the-complete-guide-to-implementing-rag-locally-no-cloud-or-frameworks-are-required
+
+## Dependencies
+
+- python3
+- accelerate
+- appdirs
+- pandas
+- sentence-transformers
+- torch
+- tqdm
+- transformers
+

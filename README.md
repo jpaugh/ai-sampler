@@ -2,8 +2,9 @@ A collection of AI demos I've worked on
 
 # Arcane Sword Maker
 
-An incremental game that grew from the bemusing idea that the power of a
-weapon in an RPG is generally correlated to the length of its name.
+An incremental game concept that grew from the bemusing idea that the
+power of a weapon in an RPG is generally correlated to the length of its
+name. It's hosted on itch.io. Please [check it out][asm-hosted]!
 
 With this project, I experimented with vibe coding, employing an
 AI-assisted rapid-prototyping methodology via Github Copilot, and
@@ -94,11 +95,6 @@ user    0m1.905s
 sys     0m0.497s
 ```
 
-
-
-[sample pdf]: https://www.intel.in/content/dam/doc/white-paper/performance-quickpath-architecture-paper.pdf
-[RAG tutorial]: https://towardsai.net/p/l/the-complete-guide-to-implementing-rag-locally-no-cloud-or-frameworks-are-required
-
 ## Dependencies
 
 - python3
@@ -110,3 +106,6 @@ sys     0m0.497s
 - tqdm
 - transformers
 
+[asm-hosted]: https://creativecraving.itch.io/arcane-sword-maker
+[sample pdf]: https://www.intel.in/content/dam/doc/white-paper/performance-quickpath-architecture-paper.pdf
+[RAG tutorial]: https://towardsai.net/p/l/the-complete-guide-to-implementing-rag-locally-no-cloud-or-frameworks-are-required

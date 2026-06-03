@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 20 140 240" class="sword" aria-label="Single-line sword">
+  <style>
+    .sword-line {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 10;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  </style>
+  <path
+    class="sword-line"
+    pathLength="1000"
+    d="M150 28 L120 96 L138 96 L138 142 L92 142 L92 158 L138 158 L138 206 L126 220 L126 244 C126 258 174 258 174 244 L174 220 L162 206 L162 158 L208 158 L208 142 L162 142 L162 96 L180 96 Z"
+  />
+</svg>

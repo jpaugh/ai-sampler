@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 20 140 240" class="axe" aria-label="Single-line axe">
+  <style>
+    .axe-line {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 10;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  </style>
+  <path
+    class="axe-line"
+    pathLength="900"
+    d="M150 30 L150 78 C150 90 138 100 126 102 L112 104 L120 120 L136 116 C146 114 156 114 166 116 L182 120 L190 104 L176 102 C164 100 152 90 152 78 L152 206 L140 220 L140 244 C140 252 162 252 162 244 L162 220 L150 206 Z"
+  />
+</svg>

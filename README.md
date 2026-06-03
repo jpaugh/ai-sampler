@@ -39,11 +39,9 @@ You'll find that within the `scripts` section of Arcane Sword Maker's
     "validate": "pnpm comment-check && pnpm lint && pnpm tsc --noEmit && pnpm build && pnpm playwright test"
 ```
 
-It includes a [comment check] (which is a custom script to remove any
+It includes a [comment check][comment-check] (a custom script to remove any
 comments created by AI), a lint check, a type-check via `tsc`. It also
 builds the project and runs integration tests.
-
-[comment check](/arcane-sword-maker/comment-check.cjs)
 
 By making use of a custom agent in VSCode (which is, essetially, a
 system prompt combined with a series of access restrictions), I
@@ -109,3 +107,5 @@ sys     0m0.497s
 [asm-hosted]: https://creativecraving.itch.io/arcane-sword-maker
 [sample pdf]: https://www.intel.in/content/dam/doc/white-paper/performance-quickpath-architecture-paper.pdf
 [RAG tutorial]: https://towardsai.net/p/l/the-complete-guide-to-implementing-rag-locally-no-cloud-or-frameworks-are-required
+[comment-check]:/arcane-sword-maker/comment-check.cjs
+

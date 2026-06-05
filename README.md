@@ -1,4 +1,4 @@
-A collection of AI demos I've worked on
+A collection of AI demos I've worked on.
 
 # Arcane Sword Maker
 
